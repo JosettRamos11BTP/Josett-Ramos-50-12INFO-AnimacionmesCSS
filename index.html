@@ -5,11 +5,62 @@
 <title>Animación de Pelota</title>
 
 <style>
+
+:root {
+  --color-fondo: linear-gradient(135deg, #1e3c72, #2a5298);
+  --color-caja: rgba(255,255,255,0.7);
+}
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-fondo);
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+
+header {
+  margin-bottom: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caja {
+  width: 320px;
+  height: 420px;
+  border: 3px solid var(--color-caja);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.pelota {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  background: red;
+
+  animation: movimiento 4s infinite linear,
+             color 3s infinite,
+             deformar 0.3s infinite;
+}
 </style>
 </head>
 
 <body>
-
+    
 <header>
   <h1>Pelota Rebotando</h1>
 </header>
@@ -23,6 +74,7 @@
     <div class="onda onda3"></div>
     <div class="onda onda4"></div>
   </section>
+
 </main>
 
 </body>
