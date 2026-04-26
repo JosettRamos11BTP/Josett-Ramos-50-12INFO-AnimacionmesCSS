@@ -56,6 +56,66 @@ main {
              color 3s infinite,
              deformar 0.3s infinite;
 }
+
+
+@keyframes movimiento {
+  0%   { top: 10px; left: 10px; }
+  25%  { top: 350px; left: 250px; }
+  50%  { top: 80px; left: 260px; }
+  75%  { top: 320px; left: 30px; }
+  100% { top: 10px; left: 10px; }
+}
+
+@keyframes color {
+  0%   { background: red; }
+  25%  { background: lime; }
+  50%  { background: blue; }
+  75%  { background: yellow; }
+  100% { background: pink; }
+}
+
+
+@keyframes deformar {
+  0%, 100% { transform: scale(1,1); }
+  50% { transform: scale(1.2,0.8); }
+}
+
+
+.onda {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 2px solid white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: expandir 2s infinite;
+}
+
+.onda1 { top: 0; left: 50%; }
+.onda2 { bottom: 0; left: 30%; animation-delay: 0.5s; }
+.onda3 { top: 50%; right: 0; animation-delay: 1s; }
+.onda4 { top: 60%; left: 0; animation-delay: 1.5s; }
+
+@keyframes expandir {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+
+.caja:hover .pelota {
+  animation-duration: 1.5s; 
+}
+
+.caja:hover {
+  background: rgba(255,255,255,0.1);
+}
+
 </style>
 </head>
 
